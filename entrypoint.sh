@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-sig=`cat ./github.sig`
+sig=`cat /github.sig`
 challenge=`ssh-keyscan -t rsa github.com | ssh-keygen -lf -`
 
 if [ "$challenge" = "$sig" ]; then
