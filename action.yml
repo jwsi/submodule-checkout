@@ -2,7 +2,7 @@ name: "Submodule Checkout"
 author: "James Webb"
 description: "GitHub action for checking out submodules defined within a repository"
 inputs:
-  ssh-key:
+  ssh_key:
     description: 'SSH private key for private submodule access'
     required: false
 runs:
