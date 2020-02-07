@@ -5,6 +5,7 @@ inputs:
   ssh_key:
     description: 'SSH private key for private submodule access'
     required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
