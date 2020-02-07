@@ -10,12 +10,16 @@ An optional SSH key used when checking out private submodules.
 
 ## Example usage
 
-### Public Submodules:
+#### Public Submodules:
 
+```
 uses: jwsi/submodule-checkout@v1
+```
 
-### Private Submodules:
+#### Private Submodules:
 
+```
 uses: jwsi/submodule-checkout@v1
 with:
   ssh-key: '${{ secrets.DEPLOY_KEY }}'
+```
