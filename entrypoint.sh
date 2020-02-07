@@ -4,6 +4,7 @@ sig=`cat /github.sig`
 challenge=`ssh-keyscan -t rsa github.com 2>/dev/null | ssh-keygen -lf -`
 
 if [ "$challenge" = "$sig" ]; then
+    ssh-keyscan github.com 2>/dev/null >> /root/.ssh/known_hosts
     if [ "$1" = "" ]; then
         echo "No SSH key detected, attempting public checkout"
         git submodule update --init --recursive
@@ -14,7 +15,6 @@ if [ "$challenge" = "$sig" ]; then
         echo "$1" > /root/.ssh/ssh.key
         chmod 600 /root/.ssh/ssh.key
         export GIT_SSH_COMMAND="ssh -i /root/.ssh/ssh.key"
-        ssh-keyscan github.com 2>/dev/null >> /root/.ssh/known_hosts
         git submodule update --init --recursive
     fi;
 else

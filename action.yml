@@ -1,6 +1,6 @@
-name: "Submodule Checkout"
-author: "James Webb"
-description: "GitHub action for checking out submodules defined within a repository"
+name: 'Submodule Checkout'
+author: 'James Webb'
+description: 'GitHub action for checking out submodules defined within a repository'
 inputs:
   ssh-key:
     description: 'SSH private key for private submodule access'
