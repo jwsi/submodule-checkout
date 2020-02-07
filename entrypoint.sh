@@ -3,6 +3,7 @@
 sig=`cat /github.sig`
 challenge=`ssh-keyscan -t rsa github.com 2>/dev/null | ssh-keygen -lf -`
 
+echo "this is a test!"
 echo $1
 
 if [ "$challenge" = "$sig" ]; then
