@@ -2,14 +2,14 @@ name: "Submodule Checkout"
 author: "James Webb"
 description: "GitHub action for checking out submodules defined within a repository"
 inputs:
-  ssh_key:
+  ssh-key:
     description: 'SSH private key for private submodule access'
     required: false
-    default: 'test'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args: ['${{ inputs.ssh_key }}']
+  args: ['${{ inputs.ssh-key }}']
 branding:
   icon: 'box'
   color: 'blue'
