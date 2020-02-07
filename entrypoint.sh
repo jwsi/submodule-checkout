@@ -3,6 +3,8 @@
 sig=`cat /github.sig`
 challenge=`ssh-keyscan -t rsa github.com 2>/dev/null | ssh-keygen -lf -`
 
+echo $1
+
 if [ "$challenge" = "$sig" ]; then
     mkdir /root/.ssh/
     chmod 700 /root/.ssh/
