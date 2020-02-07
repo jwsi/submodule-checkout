@@ -8,6 +8,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args: ['${{ inputs.ssh_key }}']
 branding:
   icon: 'box'
   color: 'blue'
